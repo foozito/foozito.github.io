@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Registo de Produção</title>
+</head>
+<body>
+    <h1>Formulário de Registo de Produção</h1>
+
+    <form action="https://formsubmit.co/samuel.vieira@jrp.pt" method="POST">
+        <!-- Para desativar captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Para redirecionar após envio (opcional) -->
+        <input type="hidden" name="_next" value="https://www.jrp.pt">
+
+        <!-- Campos -->
+        <label>Nome do Produto:</label><br>
+        <input type="text" name="produto" required><br><br>
+
+        <label>Cliente/Obra:</label><br>
+        <input type="text" name="cliente" required><br><br>
+
+        <label>Data de Produção:</label><br>
+        <input type="date" name="data" required><br><br>
+
+        <label>Trabalhadores:</label><br>
+        <input type="text" name="trabalhadores"><br><br>
+
+        <label>Horas Trabalhadas:</label><br>
+        <input type="number" name="horas" step="0.5"><br><br>
+
+        <label>Materiais Utilizados:</label><br>
+        <textarea name="materiais" rows="4" cols="50"></textarea><br><br>
+
+        <label>Lotes dos Materiais:</label><br>
+        <input type="text" name="lotes"><br><br>
+
+        <label>Observações:</label><br>
+        <textarea name="observacoes" rows="3" cols="50"></textarea><br><br>
+
+        <button type="submit">Enviar Registo</button>
+    </form>
+</body>
+</html>
