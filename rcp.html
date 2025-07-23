@@ -3,43 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>Registo de Produção</title>
+    <style>
+        .bloco-material { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; }
+        .oculto { display: none; }
+    </style>
 </head>
 <body>
-    <h1>Formulário de Registo de Produção</h1>
+    <h2>Registo de Produção</h2>
 
-    <form action="https://formsubmit.co/samuel.vieira@jrp.pt" method="POST">
-        <!-- Para desativar captcha -->
-        <input type="hidden" name="_captcha" value="false">
+    <form action="https://formsubmit.co/seu@email.com" method="POST">
+        <!-- Dados gerais -->
+        <label>Data:</label><br>
+        <input type="date" name="data" required><br><br>
 
-        <!-- Para redirecionar após envio (opcional) -->
-        <input type="hidden" name="_next" value="https://www.jrp.pt">
-
-        <!-- Campos -->
-        <label>Nome do Produto:</label><br>
+        <label>Nome do Produto Final:</label><br>
         <input type="text" name="produto" required><br><br>
 
-        <label>Cliente/Obra:</label><br>
+        <label>Cliente:</label><br>
         <input type="text" name="cliente" required><br><br>
-
-        <label>Data de Produção:</label><br>
-        <input type="date" name="data" required><br><br>
 
         <label>Trabalhadores:</label><br>
         <input type="text" name="trabalhadores"><br><br>
 
-        <label>Horas Trabalhadas:</label><br>
+        <label>Horas:</label><br>
         <input type="number" name="horas" step="0.5"><br><br>
 
-        <label>Materiais Utilizados:</label><br>
-        <textarea name="materiais" rows="4" cols="50"></textarea><br><br>
+        <div id="materiais">
+            <!-- Primeiro bloco material -->
+            <div class="bloco-material">
+                <label>Tipo de Material:</label><br>
+                <select name="material_tipo[]" onchange="atualizarCampos(this)">
+                    <option value="">-- Selecione --</option>
+                    <option value="chapa_2">chapa planificada 2mm</option>
+                    <option value="barra">barra 40x10</option>
+                    <option value="cantoneira_40x40">cantoneira 40x40</option>
+                    <option value="circulo">chapa com diâmetro</option>
+                </select><br><br>
 
-        <label>Lotes dos Materiais:</label><br>
-        <input type="text" name="lotes"><br><br>
+                <label>Quantidade:</label><br>
+                <input type="number" name="quantidade[]"><br><br>
+
+                <label>Lote:</label><br>
+                <input type="text" name="lote[]"><br><br>
+
+                <div class="campo campo-espessura">
+                    <label>Espessura:</label><br>
+                    <input type="number" name="espessura[]"><br><br>
+                </div>
+
+                <div class="campo campo-altura">
+                    <label>Altura:</label><br>
+                    <input type="number" name="altura[]"><br><br>
+                </div>
+
+                <div class="campo campo-comprimento">
+                    <label>Comprimento:</label><br>
+                    <input type="number" name="comprimento[]"><br><br>
+                </div>
+
+                <div class="campo campo-diametro">
+                    <label>Diâmetro:</label><br>
+                    <input type="number" name="diametro[]"><br><br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão para adicionar materiais -->
+        <button type="button" onclick="adicionarMaterial()">+ Adicionar Material</button><br><br>
 
         <label>Observações:</label><br>
         <textarea name="observacoes" rows="3" cols="50"></textarea><br><br>
 
         <button type="submit">Enviar Registo</button>
     </form>
+
+    <script>
+        function atualizarCampos(selectEl) {
+            const bloco = selectEl.closest('.bloco-material');
+            const tipo = selectEl.value;
+
+            bloco.querySelectorAll('.campo').forEach(c => c.classList.add('oculto'));
+
+            switch (tipo) {
+                case 'chapa_2':
+                    bloco.querySelector('.campo-espessura').classList.remove('oculto');
+                    bloco.querySelector('.campo-altura').classList.remove('oculto');
+                    bloco.querySelector('.campo-comprimento').classList.remove('oculto');
+                    break;
+                case 'barra':
+                    bloco.querySelector('.campo-comprimento').classList.remove('oculto');
+                    break;
+                case 'cantoneira_40x40':
+                    bloco.querySelector('.campo-comprimento').classList.remove('oculto');
+                    bloco.querySelector('.campo-espessura').classList.remove('oculto');
+                    break;
+                case 'circulo':
+                    bloco.querySelector('.campo-diametro').classList.remove('oculto');
+                    break;
+            }
+        }
+
+        function adicionarMaterial() {
+            const materiaisDiv = document.getElementById('materiais');
+            const primeiroBloco = materiaisDiv.querySelector('.bloco-material');
+            const novoBloco = primeiroBloco.cloneNode(true);
+
+            novoBloco.querySelectorAll('input').forEach(input => input.value = '');
+            novoBloco.querySelector('select').selectedIndex = 0;
+            novoBloco.querySelectorAll('.campo').forEach(campo => campo.classList.add('oculto'));
+
+            materiaisDiv.appendChild(novoBloco);
+        }
+    </script>
 </body>
 </html>
