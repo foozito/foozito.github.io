@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1190.55 841.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #010101;
+        font-family: CeraPro-Regular, 'Cera Pro';
+        font-size: 13.97px;
+      }
+
+      .cls-3 {
+        fill: #80bc00;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        font-family: CeraPro-Medium, 'Cera Pro';
+        font-size: 74.94px;
+        font-weight: 500;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #1d1d1b;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-5" width="1190.55" height="841.89"/>
+    </clipPath>
+  </defs>
+  <text class="cls-2" transform="translate(953.96 214.44)"><tspan x="0" y="0"> </tspan></text>
+  <g class="cls-4">
+    <path class="cls-1" d="M732.43,375.81L463.73,107.1c-24.85-24.87-65.42-24.87-90.28,0L104.75,375.81c-24.87,24.87-24.87,65.42,0,90.29l268.7,268.69c24.86,24.86,65.42,24.86,90.28,0l268.7-268.69c24.87-24.87,24.87-65.42,0-90.29"/>
+    <path class="cls-3" d="M422.56,402.13l-114.06-114.06c-10.55-10.56-27.77-10.56-38.32,0l-114.06,114.06c-10.55,10.56-10.55,27.77,0,38.33l114.06,114.06c10.55,10.55,27.77,10.55,38.32,0l114.06-114.06c10.55-10.55,10.55-27.77,0-38.33m-57.71,13.27c-1.51,3.65-4.88,5.9-8.83,5.9H222.66c-3.95,0-7.32-2.25-8.83-5.9-1.51-3.64-.72-7.62,2.07-10.41l66.68-66.68c3.72-3.72,9.79-3.72,13.51,0l66.68,66.68c2.79,2.79,3.58,6.76,2.07,10.41"/>
+    <path class="cls-7" d="M476.68,451.19l9.14,.32c8.65,0,12.25-2.94,12.25-9.96v-75.1h27.1v79.18c0,20.24-11.59,30.53-33.3,30.53-4.9,0-9.96-.65-15.18-1.96v-23.02Z"/>
+    <path class="cls-7" d="M606.68,474.2l-20.9-33.8h-10.61v33.8h-27.27v-107.75h39.02c23.67,0,40.16,14.04,40.16,36.9,0,13.22-5.71,24-15.67,30.37l24.97,40.49h-29.71Zm-31.51-57.63h11.92c7.83,0,12.4-4.9,12.4-13.22s-4.57-13.06-12.4-13.06h-11.92v26.29Z"/>
+    <path class="cls-7" d="M649.03,366.45h39.02c23.67,0,40.16,14.04,40.16,36.9s-16.49,37.06-40.16,37.06h-11.76v33.8h-27.26v-107.75Zm39.18,50.12c7.83,0,12.41-4.9,12.41-13.22s-4.57-13.06-12.41-13.06h-11.92v26.29h11.92Z"/>
+  </g>
+  <text class="cls-6" transform="translate(467.78 571.71)"><tspan x="0" y="0">Flooring </tspan></text>
+  <text class="cls-6" transform="translate(776.91 571.71)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-6" transform="translate(820.52 571.71)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-6" transform="translate(847.95 571.71)"><tspan x="0" y="0">oducts</tspan></text>
+</svg>
